@@ -1,0 +1,122 @@
+<!-- Made By Muhammad Mukhtar Bello -->
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" name="viewport"content="charset=UTF-8, width=device-width, initial_scale= 1.0">
+  <title>calculator</title>
+  <style>
+  body{
+  
+  padding:0px;
+  margin:0px;
+  box-sizing:border-box;
+    
+}
+  .container {
+    align-items:center;
+    justify-content:center;
+    background-color:black;
+    width:100%;
+    height:100vh;
+    display:flex;
+  }
+  
+  
+  .calculator {
+    background:white;
+    border-radius:25px;
+    padding:20px;
+    border:2px solid white;
+  }
+  
+  
+ .calculator form input {
+   
+   border:0;
+   outline:0;
+   cursor:pointer;
+   background:transparent;
+   border-radius:100px;
+   width:70px;
+   height:75px;
+   box-shadow:-8px -8px 15px rgb(255,255,255,0.1), 5px 5px 5px rgb(0, 0 ,0, 0.2);
+   font-size:20px;
+   margin:2px;
+   font-weight:medium;
+ }
+  
+  
+form input.display {
+    border-radius:20px;
+  width:300px;
+  box-shadow:0px;
+  font-size:20px;
+  }
+
+  
+  form input.equal {
+    width:145px;
+  }
+  
+  
+  form .display {
+    margin:20px 0;
+    justify-content:flex-end;
+    display:flex;
+  }
+  
+
+  
+form .display input {
+  flex:1;
+  box-shadow:none;
+  text-align:right;
+  font-size:45px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+  <form>
+  <div class="display">
+    <input type="text" name="display" style="border:none;" class="display">
+  </div>
+    <div class="new">
+      <input type="button" value="AC" onclick="display.value=''" class="All" style="background-color:#DC381F; color:white">
+      
+        <input type="button" value="DE" onclick="display.value=display.value.toString().slice(0,-1)" class="All" style="background-color:#C04000; color:white;">
+      <input type="button" value="/" onclick="display.value+='/'" class="All" style="background-color:cyan; color:black;">  
+      <input  type="button" value="." onclick="display.value+='.'" style="background-color:#78C7C7; color:black;">
+      <div class="new2">
+        <input  type="button" value="7" onclick="display.value+='7'" style="background-color:#FFFFFF">
+        <input  type="button" value="8" onclick="display.value+='8'"style="background-color:#FFFFFF">
+        <input  type="button" value="9" onclick="display.value+='9'" style="background-color:#FFFFFF">
+        <input  type="button" value="*" onclick="display.value+='*'" style="background-color:#78C7C7">
+        <div class="new3">
+          <input  type="button" value="4" onclick="display.value+='4'" style="background-color:#FFFFFF">
+          <input  type="button" value="5" onclick="display.value+='5'" style="background-color:#FFFFFF">
+          <input  type="button" value="6" onclick="display.value+='6'" style="background-color:#FFFFFF">
+          <input  type="button" value="-" onclick="display.value+='-'" style="background-color:#78C7C7">
+        </div>
+        
+      </div>
+      <div class="new1">
+        <input type="button" value="1" onclick="display.value+='1'" style="background-color:#FFFFFF">
+        <input type="button" value="2" onclick="display.value+='2'" style="background-color:#FFFFFF">
+        <input type="button" value="3" onclick="display.value+='3'" style="background-color:#FFFFFF">
+        <input  type="button" value="+" onclick="display.value+='+'" style="background-color:#78C7C7">
+      </div>
+      <div class="new4">
+        <input  type="button" value="0" onclick="display.value+='0'" style="background-color:#FFFFFF">
+        <input  type="button" value="00" onclick="display.value+='00'" style="background-color:#FFFFFF">
+        <input  type="button" value="=" onclick="display.value=eval(display.value)" class="equal" style="background-color:#0C090A; color:white;">
+      </div>
+      
+    </div>
+  </form>
+  </div>
+</div>
+</body>
+</html>
